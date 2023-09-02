@@ -1,0 +1,105 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden;
+}
+.nav{
+    display: flex;
+    width: 100%;
+    background-color: aqua;
+    font-size: 130%;
+}
+.nav-content button a{
+    font-size: 130%;
+    width: 30%;
+    margin: 10px;
+}
+.nav-content{
+    margin: 1%;
+}
+.info{
+    width: 60%;
+}
+.option{
+    margin-left: 10%;
+}
+.date{
+    display: flex;
+    margin: 1%;
+}
+.date .text{
+    margin-left: 15%;
+    font-size: 120%;
+}
+.date form{
+    margin-left: 4%;
+}
+.date form input{
+    font-size: 150%;
+}
+.attendence{
+    width: 80%;
+    min-height: 100%;
+    margin: 8%;
+    box-shadow: 1px 1px 1px 1px red;
+    
+}
+.subject{
+    font-size: 180%;
+    margin-left: 4%;
+}
+.present{
+    width: 130%;
+    margin-bottom: 30%;
+    align-items: center;
+    display: flex;
+}
+.present span{
+    width: 80%;
+    font-size: 130%;
+}
+.absent{
+    width: 130%;
+    display: flex;
+    margin-bottom: 5%;
+}
+.absent span{
+    width: 80%;
+    font-size: 130%;
+}
+.circle-wrap{
+    display: grid;
+    grid-template-columns: repeat(2,160px);
+    grid-gap: 80%;
+    background-color: rgb(89, 131, 131);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+.circle-wrap .circle .mask, 
+.circle-wrap .circle .fill-1{
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+}
+.circle-wrap .circle .mask{
+    clip: rect(0px, 150px, 150px, 75px);
+}
+.mask .fill-1{
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: blue;
+}
+.mask.full-1,
+.circle .fill-1{
+    animation: fill-1 ease-in-out 30s;
+    transform: rotate(135deg);
+}
+@keyframes fill-1{
+    0%{transform : rotate(0deg);}
+    100%{transform: rotate(153deg);}
+}
